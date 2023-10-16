@@ -1,44 +1,33 @@
 "use client";
 
+import NavBar from "./components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Link from "next/link";
+import { Poppins } from "next/font/google";
 
-import { useSelectedLayoutSegment } from "next/navigation";
-
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "300", "500"],
+  variable: '--main-font'
+});
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const segment = useSelectedLayoutSegment();
+
 
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <div className="flex flex-col gap-1">
-          <Link
-            href={"/"}
-            className={`${segment === null && "bg-slate-500 text-white"} `}
-          >
-            Home
-          </Link>
-          <Link
-            href={"/first"}
-            className={`${segment === "first" && "bg-slate-500 text-white"} `}
-          >
-            First
-          </Link>
-          <Link
-            href={"/second"}
-            className={`${segment === "second" && "bg-slate-500 text-white"} `}
-          >
-            Second
-          </Link>
+      <body className={`${poppins.style}`}>
+        <div className="grid grid-cols-12 mt-12">
+          <div className="col-span-2 ">
+            <NavBar />
+          </div>
+          <div className="col-span-10">
+            {children}
+          </div>
         </div>
-        {children}
       </body>
     </html>
   );
