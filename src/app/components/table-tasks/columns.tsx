@@ -11,6 +11,16 @@ export const columns: ColumnDef<Tasks>[] = [
     header: "Id",
   },
   {
+    accessorKey: "createAt",
+    header: "Create At",
+    /* cell: ({ row }) => {
+      const time : string = row.getValue("createAt")
+      const formattedTime = time.toLocaleString()
+
+      return <div className="text-right font-medium">{formattedTime}</div>
+    }, */
+  },
+  {
     accessorKey: "title",
     header: "Title",
   },

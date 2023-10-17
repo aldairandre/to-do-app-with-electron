@@ -3,21 +3,25 @@ import { Tasks } from "./types";
 export const FAKEDATA : Tasks[]  = [
   {
     id : "1",
+    createAt : `${new Date()}`,
     title: "Task 1",
-    description: "aaaaaaaaa"
+    description: "aaaaaaaaa",
   } ,
   {
     id : "2",
+    createAt : `${new Date()}`,
     title: "Task 1",
     description: "aaaaaaaaa"
   } ,
   {
     id : "3",
+    createAt : `${new Date()}`,
     title: "Task 1",
     description: "aaaaaaaaa"
   }, 
   {
     id : "4",
+    createAt : `${new Date()}`,
     title: "Task 1",
     description: "aaaaaaaaa"
   } 
