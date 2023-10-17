@@ -7,7 +7,7 @@ type Props = {};
 const page = (props: Props) => {
   return (
     <div>
-      <h1 className="text-5xl w-full text-center">Create Task</h1>
+      <h1 className="text-5xl w-full text-center mt-12">Create Task</h1>
       <div className="max-w-md m-auto mt-10">
         {/* <AddTask /> */}
         <TestForm/>

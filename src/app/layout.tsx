@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.style}`}>
-        <div className="grid grid-cols-12 mt-12">
+        <div className="grid grid-cols-12 ">
           <div className="col-span-2 ">
             <NavBar />
           </div>
