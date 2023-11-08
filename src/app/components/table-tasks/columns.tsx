@@ -3,6 +3,26 @@
 import { ColumnDef } from "@tanstack/react-table"
 import { Tasks } from "./types"
 
+const formatTime  = (time:string)  => {
+  const day = time.toLocaleString()
+  const arraDay = day.split("")
+  let date : string[] = [];
+  arraDay.map((letter)=> {
+    let findSpace = 0
+
+    if(letter === " "){
+      findSpace += 1
+    }
+
+    if(findSpace === 2){
+      date.push(letter)
+    }
+    
+  })
+  
+  
+  return day
+}
 
 
 export const columns: ColumnDef<Tasks>[] = [
@@ -13,12 +33,6 @@ export const columns: ColumnDef<Tasks>[] = [
   {
     accessorKey: "createAt",
     header: "Create At",
-    /* cell: ({ row }) => {
-      const time : string = row.getValue("createAt")
-      const formattedTime = time.toLocaleString()
-
-      return <div className="text-right font-medium">{formattedTime}</div>
-    }, */
   },
   {
     accessorKey: "title",

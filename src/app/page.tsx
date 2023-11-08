@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { DataTable } from "./components/table-tasks/data-table";
 import { columns } from "./components/table-tasks/columns";

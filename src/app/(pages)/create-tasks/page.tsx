@@ -1,6 +1,6 @@
 import React from "react";
-import AddTask from "../components/create-taks/AddTask";
-import TestForm from "../components/create-taks/TestForm";
+import AddTask from "../../components/create-taks/AddTask";
+import TestForm from "../../components/create-taks/TestForm";
 
 type Props = {};
 

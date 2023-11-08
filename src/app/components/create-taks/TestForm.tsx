@@ -35,6 +35,7 @@ function TestForm() {
         }}
         validationSchema={SignupSchema}
         onSubmit={(values, actions) => {
+          const { name,description } = values
           /* alert(JSON.stringify(values, null, 2)); */
           console.log(values);
           actions.setSubmitting(false);
